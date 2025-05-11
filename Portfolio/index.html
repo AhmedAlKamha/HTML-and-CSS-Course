@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Single File Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      color: white;
+    }
+
+    /* Header */
+    .header {
+      padding: 100px 20px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    /* Centered Image with Filter and Rounded Edges */
+    .image-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .filtered-image {
+      width: 300px;
+      filter: grayscale(50%);
+      border-radius: 15px;
+    }
+
+    /* Overlay Text on Image */
+    .image-container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+    }
+
+    /* Two-Column Layout */
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px;
+      gap: 20px;
+    }
+
+    .column {
+      width: 48%;
+      height: 150px;
+      background-color: #e8e8e8;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Table Styling */
+    table {
+      width: 80%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #999;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Paragraph Hover Effect */
+    .hover-para {
+      margin: 40px;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .hover-para:hover {
+      color: tomato;
+    }
+
+    /* Image Overlay Fade */
+    .fade-container {
+      position: relative;
+      width: 300px;
+      margin: auto;
+    }
+
+    .fade-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #f1f1f1;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .fade-container:hover .fade-overlay {
+      opacity: 1;
+    }
+
+    /* Video with Text Overlay */
+    .video-background {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-text {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-weight: bold;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#table">Table</a>
+    <a href="#video">Video</a>
+  </nav>
+
+  <!-- Header -->
+  <header id="home" class="header">
+    <h1>Welcome to My Portfolio</h1>
+  </header>
+
+  <!-- Centered Image -->
+  <section class="image-section">
+    <img src="https://cdn.pixabay.com/photo/2024/06/29/10/13/girl-8861154_1280.png" alt="Centered Example" class="filtered-image">
+  </section>
+
+  <!-- Text over image -->
+  <section class="overlay-image-section">
+    <div class="image-container">
+      <img src="https://cdn.pixabay.com/photo/2024/06/29/10/13/girl-8861154_1280.png" alt="Overlay Example">
+      <div class="overlay-text">Hello, I'm on the image</div>
+    </div>
+  </section>
+
+  <!-- Two-Column Layout -->
+  <section class="two-columns">
+    <div class="column">Left column with styled text</div>
+    <div class="column">Right column with styled text</div>
+  </section>
+
+  <!-- Styled Table -->
+  <section id="table">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+      <tr>
+        <td>Alice</td>
+        <td>Developer</td>
+      </tr>
+      <tr>
+        <td>Bob</td>
+        <td>Designer</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Paragraph Hover Effect -->
+  <p class="hover-para">Hover over me for a color change!</p>
+
+  <!-- Image Overlay Fade -->
+  <section class="fade-image">
+    <div class="fade-container">
+      <img src="https://media.istockphoto.com/id/165932687/vector/walk-in-the-rain.jpg?s=2048x2048&w=is&k=20&c=Pt6YFtyhwK2Q-rJCkqbu1cqtYJ2R0uWWLhsPiyjipLc=" alt="Fade Overlay">
+      <div class="fade-overlay">Fade In Text</div>
+    </div>
+  </section>
+
+  <!-- Autoplaying, Looping, Muted Video -->
+  <section id="video" style="position: relative;">
+    <video autoplay muted loop class="video-background">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-text">This is overlay text on the video</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio | Built with HTML & CSS</p>
+  </footer>
+
+</body>
+</html>
